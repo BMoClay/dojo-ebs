@@ -1,20 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const Navbar = ({books}) => {
-    return ( 
-        <div className="navbar">
-            {books.map((book) => (
-            <div className="links" key={book.id}>
-                <Link to={`/${book.urlText}`}>
-                    <img className="logos" src={book.logo} alt={book.bookTitle}/>
-                </Link>
-                {/* <h2>{book.bookTitle} by {book.artist}</h2>
-                <p>{book.size}, {book.binding}, {book.price}</p> */}
-            </div>
-           ))}
-            
-        </div>
-     );
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <h1>The Dojo Blog</h1>
+      <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/" style={{ 
+          color: 'white', 
+          backgroundColor: '#f1356d',
+          borderRadius: '8px' 
+        }}>New Blog</Link>
+      </div>
+    </nav>
+  );
 }
  
 export default Navbar;

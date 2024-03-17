@@ -2,19 +2,20 @@
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BookDetails from './BookDetails';
+import Navbar from './Navbar';
 
 function App() {
 
   return (
     <Router>
       <div className="App">
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="content">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/books/:urlText">
+            <Route path="/books/:id">
               <BookDetails />
             </Route>
           </Switch>
