@@ -95,6 +95,7 @@ const Home = () => {
     },
   ]);
 
+  
   const handleDelete = (id) => {
     const newBooks = books.filter((book) => book.id !== id);
     setBooks(newBooks);
