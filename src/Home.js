@@ -6,6 +6,9 @@ import coverImage1 from "./assets/coverImages/IMG_9389 copy.jpg";
 import coverImage2 from "./assets/coverImages/IMG_9393 copy.jpg";
 import coverImage3 from "./assets/coverImages/IMG_9409 copy.jpg";
 import BookList from "./BookList";
+import Navbar from './Navbar';
+
+
 
 const Home = () => {
   const [books, setBooks] = useState([
@@ -95,7 +98,7 @@ const Home = () => {
     },
   ]);
 
-  
+
   const handleDelete = (id) => {
     const newBooks = books.filter((book) => book.id !== id);
     setBooks(newBooks);
@@ -108,6 +111,7 @@ const Home = () => {
         // handleFilterYear={handleFilterYear}
       /> */}
        <BookList books={books} title="all books" handleDelete={handleDelete} />
+       <Navbar books={books}/>
       {/* <button onClick={() => setYearFilter(2024)}>change year</button> */}
       {/* <BookList books={books.filter((book) => book.year === 2025)} title="2025 books"/> */}
       {/* <p>{ yearFilter }</p> */}

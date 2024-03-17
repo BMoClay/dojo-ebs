@@ -6,8 +6,8 @@ const BookList = ({ books, title }) => {
             {books.map((book) => (
             <div className="book-preview" key={book.id}>
                 <img className="logos" src={book.logo} alt={book.bookTitle}/>
-                <h2>{book.bookTitle} by {book.artist}</h2>
-                <p>{book.size}, {book.binding}, {book.price}</p>
+                {/* <h2>{book.bookTitle} by {book.artist}</h2>
+                <p>{book.size}, {book.binding}, {book.price}</p> */}
             </div>
            ))}
         </div>
